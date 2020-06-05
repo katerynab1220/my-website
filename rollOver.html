@@ -1,0 +1,28 @@
+<html>
+<head>
+    <h1>Family Picture</h1>
+    <p>Click here to <a href="index.html">return to my home page. </a>
+<script language = "JavaScript">
+ 
+    function rollIn(daImage)
+    {
+	   daImage.src="images/roll2.jpg";
+    }
+    
+    function rollOut(daImage)
+    {
+	   daImage.src="images/roll1.jpg";
+    }
+
+
+
+</script>
+</head>
+<body bgcolor = "purple">
+<center>
+<br/> <br/> <br/> <br/>   
+<img src="images/roll1.jpg" width = 400 onmouseout="rollOut(this)" onmouseover="rollIn(this)"/>
+</body>
+</html>
+
+

@@ -1,0 +1,57 @@
+<html>
+<head>
+<script language="JavaScript">
+var srcList = ["images/imgAnim/img0.jpg", 
+               "images/imgAnim/img1.jpg", 
+               "images/imgAnim/img2.jpg", 
+               "images/imgAnim/img3.jpg",  
+               "images/imgAnim/img4.jpg",  
+               "images/imgAnim/img5.jpg",  
+               "images/imgAnim/img6.jpg",  
+               "images/imgAnim/img7.jpg",  
+               "images/imgAnim/img8.jpg" ];		   
+var index = 0;
+var loopCount = 0;
+
+var time; 
+    
+
+function begin()
+{
+	index = index +1;
+    
+    // my list has 9 elements, so the last element is
+    // at index 8
+if( index > 8) // larger than 8 will error.
+{
+    index = 0;
+    loopCount = loopCount +1;
+}
+document.getElementById("myPic").src = srcList[index];
+
+    if(loopCount < 5)
+       {
+        setTimeout("begin()", 100);
+       }
+       else
+       {
+          time = clearTime();
+          loopCount = 0;
+       }
+}
+</script>
+</head>
+<body>
+<center>
+<h1>sHrEk</h1>
+    
+<p>Click here to <a href="index.html">go to home page. </a>
+    
+<img id="myPic" src="images/imgAnim/img0.jpg" width="600"/>
+
+<br/><br/>
+<input type="button" value="Start!" onclick="begin()">
+
+</center>
+</body>
+</html>
